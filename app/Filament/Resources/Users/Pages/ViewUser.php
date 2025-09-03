@@ -3,11 +3,14 @@
 namespace App\Filament\Resources\Users\Pages;
 
 use App\Filament\Resources\Users\UserResource;
+use AymanAlhattami\FilamentPageWithSidebar\Traits\HasPageSidebar;
 use Filament\Actions\EditAction;
 use Filament\Resources\Pages\ViewRecord;
 
 class ViewUser extends ViewRecord
 {
+    use HasPageSidebar;
+
     protected static string $resource = UserResource::class;
 
     protected function getHeaderActions(): array
